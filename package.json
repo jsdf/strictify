@@ -21,7 +21,8 @@
   "keywords": [
     "strict mode",
     "browserify",
-    "transform"
+    "transform",
+    "browserify-transform"
   ],
   "contributors": [
     {
