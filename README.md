@@ -2,7 +2,7 @@
 
 browserify v2 plugin for enforcing strict mode
 
-adds `"use strict";` to the top of every module file
+adds `"use strict";` to the top of every module in bundle output
 
 # example
 
@@ -11,7 +11,7 @@ given some files :
 neat-module.js:
 ```js
 function doStuff() {
-  
+
 }
 ```
 
@@ -29,9 +29,10 @@ $ browserify -t strictify neat-module.js > bundle.js
 
 bundle.js output:
 ```js
+// browserify bundle wrapper omitted
 "use strict";
 function doStuff() {
-  
+
 }
 ```
 
