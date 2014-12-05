@@ -2,7 +2,7 @@
 
 var util = require('util');
 var through = require('through');
-var path = require("path");
+var path = require('path');
 
 function strictify(file, opts) {
   opts = opts || {};
