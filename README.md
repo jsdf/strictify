@@ -36,9 +36,9 @@ function doStuff() {
 }
 ```
 
-opts:
+# opts
 
-'exclude': array of file extensions to exclude. defaults to ['json']
+`exclude`: array of file extensions to exclude. defaults to `['json']`
 
 # install
 
