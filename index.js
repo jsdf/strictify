@@ -12,7 +12,8 @@ function strictify(file, opts) {
   return stream;
 
   function write(buf) {
-    if (!applied) {
+    if (!applied && (opts.exclude || []).indexOf(
+          path.extname(file).replace(".", "")) < 0) {
       stream.queue('"use strict";\n');
       applied = true;
     }
