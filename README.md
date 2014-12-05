@@ -36,6 +36,10 @@ function doStuff() {
 }
 ```
 
+opts:
+
+'exclude': array of file extensions to exclude. defaults to ['json']
+
 # install
 
 With [npm](https://npmjs.org) do:
