@@ -2,6 +2,7 @@
 
 var util = require('util');
 var through = require('through');
+var path = require('path');
 
 function strictify(file, opts) {
   opts = opts || {};
@@ -12,7 +13,8 @@ function strictify(file, opts) {
   return stream;
 
   function write(buf) {
-    if (!applied) {
+    if (!applied && (opts.exclude || []).indexOf(
+          path.extname(file).replace('.', '')) < 0) {
       stream.queue('"use strict";\n');
       applied = true;
     }
