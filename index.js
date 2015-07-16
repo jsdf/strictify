@@ -8,6 +8,8 @@ function strictify(file, opts) {
   opts = opts || {};
   opts.exclude = ['json'].concat(opts.exclude||[]);
 
+  var tail = opts.newline ? '\n' : '';
+
   var stream = through(write, end);
   var applied = false;
 
@@ -20,7 +22,7 @@ function strictify(file, opts) {
 
   function write(buf) {
     if (!applied && !excluded) {
-      stream.queue('"use strict";\n');
+      stream.queue('"use strict";'+tail);
       applied = true;
     }
     stream.queue(buf);
