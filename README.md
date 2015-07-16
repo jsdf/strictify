@@ -39,7 +39,7 @@ function doStuff() {
 # opts
 
 `exclude`: array of file extensions to exclude. defaults to `['json']`
-`newline`: boolean to append a newline after "use strict". defaults to `true`
+`newline`: boolean to append a newline after "use strict". defaults to `false`
 
 # install
 

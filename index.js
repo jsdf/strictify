@@ -8,7 +8,7 @@ function strictify(file, opts) {
   opts = opts || {};
   opts.exclude = ['json'].concat(opts.exclude||[]);
 
-  var tail = opts.newline !== false ? '\n' : '';
+  var tail = opts.newline ? '\n' : '';
 
   var stream = through(write, end);
   var applied = false;
